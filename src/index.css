@@ -1,0 +1,18 @@
+:root{
+  --main-bg: #0F1115;
+  --section-bg: #161A22;
+}
+
+body{
+  margin: 0;
+}
+
+*{
+  font-family: Poppins;
+  box-sizing: border-box;
+}
+
+.main-container{
+  background-color: var(--main-bg);
+  padding-bottom: 50px;
+}
