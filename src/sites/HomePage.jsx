@@ -1,6 +1,9 @@
-
+import { useNavigate } from 'react-router-dom'
+import './../styles/HomePage.css'
 
 function HomePage(){
+
+  const navigate = useNavigate();
 
   const sections = [
     {
@@ -34,7 +37,7 @@ function HomePage(){
           ))}
         </section>
         <div className="about-btn-box">
-          <button className="to-presentation">Zobacz prezentację</button>
+          <button className="to-presentation" onClick={() => navigate("/prezentacja")}>Zobacz prezentację</button>
         </div>
       </main>
     </>

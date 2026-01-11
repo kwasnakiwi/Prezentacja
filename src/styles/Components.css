@@ -19,16 +19,19 @@
     padding: 0;
     margin: 0;
     display: flex;
+    justify-content: center;
     align-items: center;
     gap: 32px;
     width: 100%;
+    position: relative;
 }
 .navbar-element.logo{
-    margin-right: auto;
     font-size: 28px;
     font-weight: 600;
     cursor: default;
     user-select: none;
+    position: absolute;
+    inset: 0;
 }
 .navbar-element{
     height: 100px;
