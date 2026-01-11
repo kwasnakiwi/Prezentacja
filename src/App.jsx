@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 import HomePage from "./sites/HomePage.jsx"
 import Gallery from './sites/Gallery.jsx'
 import Navbar from './components/Navbar.jsx'
+import GalleryDetails from './sites/GalleryDetails.jsx'
 
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path='/galeria' element={<Gallery />} />
+          <Route path='/galeria/:id' element={<GalleryDetails />} />
         </Routes>
       </Router>
     </>

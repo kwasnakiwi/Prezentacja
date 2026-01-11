@@ -1,0 +1,117 @@
+:root{
+  --main-bg: #0c0c0c;
+  --section-bg: #242425;
+  --main-text: #E6E8EB;
+  --secondary-text: #A1A6B0;
+  --detail: #232838;
+  --accent: #db0018;
+}
+.gal-header{
+    padding: 200px 50px 100px;
+}
+.gal-title{
+    margin: 0;
+    color: var(--main-text);
+    text-align: center;
+    font-size: 62px;
+    position: relative;
+}
+.gallery-images{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
+    gap: 24px;
+    margin: 0 5%;
+
+    img{
+        height: 300px;
+        width: 500px;
+        object-fit: cover;
+        border-radius: 14px;
+        display: block;
+        margin: 0 auto;
+        transition: scale 0.2s ease;
+        cursor: pointer;
+        &:hover{
+            scale: 1.05;
+        }
+    }
+}
+
+/* image detail */
+
+.image-wrapper{
+    display: flex;
+    align-items: center;
+    padding: 100px 20px 0;
+}
+.big-image{
+    width: 1000px;
+    height: 700px;
+    object-fit: cover;
+    border-radius: 24px;
+    corner-shape: squircle;
+}
+.image-details{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 24px;
+    background-color: var(--section-bg);
+    height: 700px;
+    padding: 20px;
+    border-radius: 24px;
+    corner-shape: squircle;
+    position: relative;
+    border: 1.5px solid var(--detail);
+}
+.image-title{
+    font-size: 45px;
+    font-weight: 500;
+    color: var(--main-text);
+    margin: 0;
+}
+.image-desc{
+    font-size: 18px;
+    font-weight: 300;
+    color: var(--secondary-text);
+    margin: 0;
+}
+.next-image{
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    padding: 13px 45px;
+    font-size: 24px;
+    font-weight: 500;
+    color: var(--accent);
+    background-color: transparent;
+    border: 3px solid var(--accent);
+    border-radius: 24px;
+    corner-shape: squircle;
+    transition: background-color 0.2s ease, color 0.2s ease;
+    cursor: pointer;
+    &:hover{
+        background-color: var(--accent);
+        color: var(--main-text);
+    }
+}
+.icon{
+    transform: translateY(10%);
+}
+.back{
+    font-size: 65px;
+    color: var(--main-text);
+    position: absolute;
+    top: 130px;
+    left: 50px;
+    cursor: pointer;
+}
+.x-mark{
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    font-size: 75px;
+    color: var(--main-text);
+    cursor: pointer;
+}
