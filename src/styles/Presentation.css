@@ -1,0 +1,107 @@
+:root{
+  --main-bg: #0c0c0c;
+  --section-bg: #242425;
+  --main-text: #E6E8EB;
+  --secondary-text: #A1A6B0;
+  --detail: #232838;
+  --accent: #db0018;
+  --presentation-text: #f0efea;
+}
+.presentation{
+  min-height: 100vh;
+  background-color: var(--section-bg);
+}
+.presentation-slide{
+  min-height: 100vh;
+  position: relative;
+  background-color: #0e0e0e;
+}
+#slide1, #slide21{
+  z-index: 1;
+  &::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url("../assets/images/glowne_tlo.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+  }
+}
+#slide2, #slide6, #slide11, #slide13,
+#slide19{
+  img{
+    width: 40%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .presentation-slide-title{
+    bottom: 150px;
+    left: 100px;
+    max-width: 700px;
+  }
+  .presentation-slide-desc{
+    max-width: 700px;
+    top: 150px;
+    left: 100px;
+  }
+}
+#slide3, #slide4, #slide5, #slide7,
+#slide8, #slide9, #slide10, #slide12,
+#slide14, #slide15, #slide16, #slide17,
+#slide18, #slide20{
+  .presentation-slide-title{
+    top: 150px;
+    right: 100px;
+  }
+  .presentation-slide-desc{
+    max-width: 700px;
+    bottom: 150px;
+    left: 100px;
+  }
+}
+.presentation-title{
+  font-size: 90.5px;
+  color: var(--presentation-text);
+  text-align: center;
+  margin: 0;
+  position: absolute;
+  width: 100%;
+  top: 200px;
+}
+.presentation-subtitle{
+  position: absolute;
+  bottom: 150px;
+  right: 50px;
+  max-width: 900px;
+  font-size: 25px;
+  font-weight: 500;
+  color: var(--presentation-text);
+  margin: 0;
+}
+.presentation-slide-title{
+  font-size: 60px;
+  font-weight: bold;
+  margin: 0;
+  color: var(--presentation-text);
+  position: absolute;
+}
+.presentation-slide-desc{
+  font-size: 25px;
+  margin: 0;
+  color: var(--presentation-text);
+  position: absolute;
+}
+.main-container.presentation{
+  padding: 0;
+}
+body:has(.main-container.presentation){
+  overflow: hidden;
+}
+
+/* animations */
+
